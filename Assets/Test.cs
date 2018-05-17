@@ -36,8 +36,10 @@ public class Test : MonoBehaviour {
        
         lastboss.Magic();
 
-        int[] array = { 6, 7, 64, 67 };
+        int[] array = { 6, 7, 64, 67,70 };
+
  Debug.Log("配列の宣言です");
+
         for (int i = 0; i < array.Length; i++)
         {
 
@@ -45,13 +47,12 @@ public class Test : MonoBehaviour {
 
         }
         Debug.Log("配列の逆の宣言です");
-        for (int i = 3; i < array.Length; i--)
-        {
 
+        for (int i = array.Length - 1; 0 <= i; i--)
+        {
             Debug.Log(array[i]);
 
         }
-       
     }	
 	// Update is called once per frame
 	void Update () {
