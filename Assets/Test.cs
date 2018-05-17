@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss {
-    int mp = 53;
-    public void Magic()
+
+    public int mp = 53;
+
+    public void Magic(int mps)
     {
-        for(int a=1;a<=11;a++ )
+       
         if (mp > 3)
         {
 
-            mp -= 5;
+            mp -= mps;
 
             Debug.Log("魔法を使用した。残りMPは" + mp);
 
@@ -21,6 +23,9 @@ public class Boss {
             Debug.Log("MPが足りないため魔法が使えない");
 
         }
+
+
+
     }
 }
 
@@ -34,7 +39,16 @@ public class Test : MonoBehaviour {
 
         Boss lastboss = new Boss();
        
-        lastboss.Magic();
+        
+
+        for(int i = 1; i <= 11; i++)
+        {
+
+            lastboss.Magic(5);
+
+        
+
+        }
 
         int[] array = { 6, 7, 64, 67,70 };
 
