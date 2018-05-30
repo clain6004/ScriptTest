@@ -9,7 +9,7 @@ public class Boss {
     public void Magic(int mps)
     {
        
-        if (mp > 3)
+        if (mp >= 3)
         {
 
             mp -= mps;
